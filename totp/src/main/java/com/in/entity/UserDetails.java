@@ -1,5 +1,6 @@
 package com.in.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,6 +8,8 @@ import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.UniqueElements;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,6 +26,7 @@ public class UserDetails {
 	private int id;
 
 	private String name;
+	
 	
 	@Email(message = "Email is not valid")
 	private String email;

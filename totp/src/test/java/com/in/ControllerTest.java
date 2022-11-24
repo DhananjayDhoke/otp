@@ -50,7 +50,7 @@ class ControllerTest {
 		
 		List<UserDetails> list = getUserList();
 		when(service.getAllUsers()).thenReturn(list);
-		assertEquals(list, controller.GetAllUsers().getBody());
+		assertEquals(list, controller.getAllUsers().getBody());
 	}
 	
 	
@@ -59,7 +59,7 @@ class ControllerTest {
 		
 		List<UserDetails> list = getUserList();
 		when(service.getAllUsers()).thenReturn(list);
-		assertEquals(HttpStatus.OK, controller.GetAllUsers().getStatusCode());
+		assertEquals(HttpStatus.OK, controller.getAllUsers().getStatusCode());
 	}
 	
 	List<UserDetails> getUserList(){

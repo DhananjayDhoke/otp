@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UserResponce {
    
-   private String StatusCode;
-   private String TraceID;
+   private String statusCode;
+   private String traceID;
    private String otp;
    private String message;
    

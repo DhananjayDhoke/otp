@@ -25,7 +25,7 @@ public class TotpImpl implements Totp{
 
 	private long validtill;
 	private String OTP;
-	private String EMAIL;
+	
 	
 	@Autowired
 	private UserRepo userRepo;
@@ -43,7 +43,6 @@ public class TotpImpl implements Totp{
 	    byte[] bytes = base32.decode(secretKey+random);
 	    String hexKey = Hex.encodeHexString(bytes);
 	    OTP = TOTP.getOTP(hexKey);
-	    EMAIL = secretKey;
 	    return OTP;
 	}
 
